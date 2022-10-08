@@ -34,3 +34,40 @@ a = b = c = 1
 # 不可变数据（3个）：number(数字)、String（字符串）、Tuple(元组);
 # 可变数据（3个）：List(列表)、Dictionary(字典)、Set（集合）。
 # --------------------------------------------------------------------------
+# Number(数字)
+# Python3支持int、float、bool、complex（复数）。
+# 在Python3里，只有一种整数类型int、表示为长整型，没有python2中的long。
+# 像大多数语言一样，数值类型的赋值和计算机都是很直观的
+# 内置的type()函数可以用来查询变量所指的对象类型
+# a, b, c, d = 20, 5.5, True, 4+3j
+# print(type(a),type(b),type(c),type(d))
+# # <class 'int'> <class 'float'> <class 'bool'> <class 'complex'>
+#此外 还可以用isinstance来判断
+# a = 111
+# if isinstance(a,int):
+#     print("zhen")
+# else:
+#     print("jia")
+# isinstance()和 type()区别在于：
+# type()不会认为子类是一种父类类型
+# isinstance()会认为子类是父类类型
+class A:
+    pass
+class B:
+    pass
+if isinstance(A(),A):
+    print("ture")
+else:
+    print("fales")
+if type(A()) == A:
+    print("ture")
+else:
+    print("fales")
+if isinstance(B(), A):
+    print("ture")
+else:
+    print("fales")
+if type(B()) == A:
+    print("ture")
+else:
+    print("fales")
